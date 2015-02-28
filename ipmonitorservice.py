@@ -33,7 +33,7 @@ def sendEmail(message):
 
 
 ### Run Python scripts as a service example from ryrobes.com
-### Usage : python aservice.py install (or / then start, stop, remove)
+### Usage : python ipmonitorservice.py install (or / then start, stop, remove)
 import win32service
 import win32serviceutil
 import win32api
@@ -42,7 +42,7 @@ import win32event
 import win32evtlogutil
 import os, sys, string, time
 
-class aservice(win32serviceutil.ServiceFramework):
+class ipmonitorservice(win32serviceutil.ServiceFramework):
 	#Name the service and give it a description and display name
     _svc_name_ = "IPmonitorService"
     _svc_display_name_ = "IP Python Security Daemon"
@@ -91,4 +91,4 @@ def ctrlHandler(ctrlType):
                  
 if __name__ == '__main__':  
     win32api.SetConsoleCtrlHandler(ctrlHandler, True)  
-    win32serviceutil.HandleCommandLine(aservice)
+    win32serviceutil.HandleCommandLine(ipmonitorservice)
