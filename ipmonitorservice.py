@@ -33,7 +33,7 @@ def sendEmail(message):
 
 
 ### Run Python scripts as a service example from ryrobes.com
-### Usage : python ipmonitorservice.py install (or / then start, stop, remove)
+### Usage : python aservice.py install (or / then start, stop, remove)
 import win32service
 import win32serviceutil
 import win32api
